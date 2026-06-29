@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Advanced Phishing Detection</title>
+    <meta name="description" content="Protect yourself from malicious websites with our real-time phishing URL scanner.">
+    <meta name="keywords" content="phishing detection, url scanner, cybersecurity, safe browsing">
+    
+    <meta property="og:title" content="PhishGuard - Advanced Phishing Detection">
+    <meta property="og:description" content="Protect yourself from malicious websites with our real-time phishing URL scanner.">
+    <meta name="twitter:title" content="PhishGuard - Advanced Phishing Detection">
+    <meta name="twitter:description" content="Protect yourself from malicious websites with our real-time phishing URL scanner.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+    }
+
+    @layer base {
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] hover:bg-[var(--primary-hover)] text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center;
+        }
+        .card {
+            @apply bg-[var(--bg-card)] border border-slate-700 rounded-xl p-6 shadow-lg;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Utilities -->
+    <script type="text/babel" src="utils/scannerMock.js"></script>
+    
+    <!-- Components -->
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/Scanner.js"></script>
+    <script type="text/babel" src="components/ScanResult.js"></script>
+    <script type="text/babel" src="components/Features.js"></script>
+    
+    <!-- Main App -->
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
+
